@@ -4,7 +4,7 @@
 .about {
 	position : relative;
 	overflow : hidden;
-					/*　　画像のサイズに合わせて変更*/
+			/*　　画像のサイズに合わせて変更*/
 	width : 200px;
 	height :200px;
 	margin : auto;
@@ -15,7 +15,7 @@
 .about img{
 	display : block;
 	position : absolute;
-					/*　　画像のサイズを表示エリアに合わせる*/
+			/*　　画像のサイズを表示エリアに合わせる*/
 	width : inherit;
 	height : inherit;
 	left : 100%;
