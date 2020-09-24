@@ -19,14 +19,12 @@
 	width : inherit;
 	height : inherit;
 	left : 100%;
-	animation : slideAnime 12s ease infinite;
+	animation : slideAnime 6s ease infinite;
 }
 
 /*　　スライドのアニメーションを段差で開始する*/
 .about img:nth-of-type() { animation-delay: 0s }
 .about img:nth-of-type() { animation-delay: 3s }
-.about img:nth-of-type() { animation-delay: 6s }
-.about img:nth-of-type() { animation-delay: 9s }
 
 /*　　スライドのアニメーション*/
 @keyframes slideAnime{
