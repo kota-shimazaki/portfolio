@@ -1,38 +1,133 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <ling rel="syylesheet" type="text/css" href="stylesheet.css">
-    </head>
-    <body>
-        <header class="header">	
-	<!-- 
-	ロゴなくすかも
-	-->
-	<div class="logo">
-	    <a>KOTA_SHIMAZAKI</a>
-	</div>
-        </header>
-	    
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Home page</title>
+	<link rel="stylesheet" th:href="@{/css/singleColumn.css}" type="text/css">
+	</head>
+<body>
+	<header class="header">
+		<!--
+		ロゴなくすかも
+		-->
+		<div class="logo">
+	    	<a>KOTA_SHIMAZAKI</a>
+		</div>
+		
+		<div class="navigation">
+			<ul>
+				<li><a href="#about">about</a></li>
+				<li><a href="#works">works</a></li>
+				<li><a href="#stage">skills</a></li>
+			</ul>
+		</div>
+		
+    </header>
+
 	<div id="main">
-	    <div class="about">
-		<img src="top.png" />
-		<img src="neko.jpg" />
+		<!--　画面上部の帯 -->
+		<div class="about_top_belt">ABOUT</div>
+	    <div id="about">
+			<img src="banana.png">
+			<img src="coffee.png" />
 	    </div>
-	    <div class="works">
-		<img src="" />
-		<img src="" />
-		<img src="" />
-		<img src="" />
-	    </div>
-	    <!-- 
-	    加えるか考え中
-	    <div class="blog">
-		  	
-	    </div>
-	    -->
+	    
+	    <!--　画面上部の帯 -->
+		<div class="works_top_belt">WORKS</div>
+	    <div id="works">
+	    	<div class="container">
+				<div class="item">
+					<h3>husband</h3>
+					<img alt="" src="">
+					<p>2018年9月から、夫として働いています。料理、掃除、洗濯、育児をメインに行っています。妻はそれに加えて、収納、家計管理を担当してくれます。</p>
+				</div>
+				<div class="item">
+					<h3>backend engineer</h3>
+					<img alt="" src="">
+					<p>システムエンジニアとしてお客様先に常駐し、システム開発の支援を行います。</p>
+				</div>
+				<div class="item">
+					<h3>father</h3>
+					<img alt="" src="">
+					<p>2020年4月から父親として働いています。</p>
+				</div>
+	    	</div>
+	    </div> 
+	    
+	    
+	    
+	    
+	    
+	    <!--　画面上部の帯 -->
+		<div class="skills_top_belt">SKILLS</div>
+		<!--　スライド表示枠 -->
+		<div id="stage">
+    		<!--　スライド切換えボタン用ラジオボタン -->
+    		<input type="radio" id="r1" name="gal">
+    		<input type="radio" id="r2" name="gal">
+    		<input type="radio" id="r3" name="gal">
+    		<input type="radio" id="r4" name="gal">
+    		<input type="radio" id="r5" name="gal">
+    		<!--　送りボタン用ラジオボタン -->
+    		<input type="radio" id="back1" name="gal"><input type="radio" id="next1" name="gal">
+    		<input type="radio" id="back2" name="gal"><input type="radio" id="next2" name="gal">
+    		<input type="radio" id="back3" name="gal"><input type="radio" id="next3" name="gal">
+    		<input type="radio" id="back4" name="gal"><input type="radio" id="next4" name="gal">
+    		<input type="radio" id="back5" name="gal"><input type="radio" id="next5" name="gal">
+    		<!-- 現スライド標示ボタンのラジオボタンとの関連付け -->
+    		<label for="r1" id="lb1" class="circ"><img src="Java.gif"></label>
+    		<label for="r2" id="lb2" class="circ"><img src="database.gif"></label>
+    		<label for="r3" id="lb3" class="circ"><img src="html.gif"></label>
+    		<label for="r4" id="lb4" class="circ"><img src="css.gif"></label>
+    		<label for="r5" id="lb5" class="circ"><img src="Python.gif"></label>
+  
+    		<!--　スライド群 -->
+    		<div id="photos">
+			<!--　スライド1 -->
+			<div id="photo1" class="pic">
+
+            	<!--　スライド写真と現スライド標示ボタン -->
+      	    	<img th:src="@{/images/child.JPEG}"><img th:src="@{/images/Java.gif}">
+
+            	<!--　送りボタンの表示とラジオボタンとの関連付け -->
+            	<label for="back1"><span class="pb">＜</span></label>
+            	<label for="next1"><span class="nb">＞</span></label>
+
+			</div>      
+			<div id="photo2" class="pic">
+      	    	<img src="banana.png"><img src="database.gif">
+            	<label for="back2"><span class="pb">＜</span></label>
+            	<label for="next2"><span class="nb">＞</span></label>
+			</div>
+			<div id="photo3" class="pic">
+      	    	<img src="banana.png"><img src="html.gif">
+            	<label for="back3"><span class="pb">＜</span></label>
+            	<label for="next3"><span class="nb">＞</span></label>
+			</div>
+			<div id="photo4" class="pic">
+      	    	<img src="banana.png"><img src="css.gif">
+            	<label for="back4"><span class="pb">＜</span></label>
+            	<label for="next4"><span class="nb">＞</span></label>
+			</div>
+			<div id="photo5" class="pic">
+      	    	<img src="banana.png"><img src="Python.gif">
+            	<label for="back5"><span class="pb">＜</span></label>
+            	<label for="next5"><span class="nb">＞</span></label>
+			</div>
+    	</div>
+    	<!-- stageの高さの確保 -->
+    	<div style="padding:33.5%;"></div>
+		</div>
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	    <div class="contact">
-		  
 	    </div>
 	</div>
-    </body>
+</body>
 </html>
