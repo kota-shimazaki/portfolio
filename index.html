@@ -11,123 +11,222 @@
 		ロゴなくすかも
 		-->
 		<div class="logo">
-	    	<a>KOTA_SHIMAZAKI</a>
+			<h2>KOTA_SHIMAZAKI</h2>
 		</div>
-		
+
 		<div class="navigation">
 			<ul>
-				<li><a href="#about">about</a></li>
-				<li><a href="#works">works</a></li>
-				<li><a href="#stage">skills</a></li>
+				<li><a href="#about_top_belt">ABOUT</a></li>
+				<li><a href="#works_top_belt">WORKS</a></li>
+				<li><a href="#skills_top_belt">SKILLS</a></li>
 			</ul>
 		</div>
-		
-    </header>
+
+	</header>
 
 	<div id="main">
 		<!--　画面上部の帯 -->
-		<div class="about_top_belt">ABOUT</div>
-	    <div id="about">
-			<img src="banana.png">
-			<img src="coffee.png" />
-	    </div>
-	    
-	    <!--　画面上部の帯 -->
-		<div class="works_top_belt">WORKS</div>
-	    <div id="works">
-	    	<div class="container">
+		<div id="about_top_belt">
+			<h3>ABOUT</h3>
+		</div>
+		<div id="about">
+			<div class="about-main">
+				<h2>KOTA_SHIMAZAKI</h2>
+				<p>
+					<span class="br"></span>バックエンドエンジニアとして活動しております。
+				</p>
+				<p>1990年生まれ、山梨県出身。</p>
+				<p>2011年保育士の専門学校を卒業後、保育園に勤務。</p>
+				<p>2019年転職、エルバーククラウド入社。</p>
+				<p>テスターとして経験を積みながらプログラミングの学習。</p>
+				<p>現場必要スキルの為フレームワーク「SpringBoot」習得。</p>
+
+			</div>
+			<div class="about-img">
+				<img src="fuji-mountain_640.jpg"> <img
+					src="parent_640.jpg"> <img
+					src="computer_640.jpg">
+			</div>
+		</div>
+
+		<!--　画面上部の帯 -->
+		<div id="works_top_belt">
+			<h3>WORKS</h3>
+		</div>
+		<div id="works">
+			<div class="container">
 				<div class="item">
 					<h3>husband</h3>
-					<img alt="" src="">
-					<p>2018年9月から、夫として働いています。料理、掃除、洗濯、育児を行います。妻はそれに加えて、収納、家計管理を担当してくれます。</p>
+					<img alt="夫婦" src="husband.png">
+					<p>2018年9月結婚。夫として働いています。料理、掃除、洗濯、育児を行い、妻はそれに加えて収納、家計管理を担当してくれます。</p>
 				</div>
 				<div class="item">
 					<h3>backend engineer</h3>
-					<img alt="" src="">
-					<p>IT企業<a href="https://www.lberc-g.jp/">LBRC GRORP</a>、SES事業部に所属しております。システムエンジニアとしてお客様先に常駐し、システム開発の支援を行います。</p>
+					<img alt="パソコン" src="pc.png" />
+					<p>
+						IT企業<a href="https://www.lberc-g.jp/">LBRC GRORP</a>、SES事業部に所属しております。システムエンジニアとしてお客様先に常駐しシステム開発の支援を行います。
+					</p>
 				</div>
 				<div class="item">
 					<h3>father</h3>
-					<img alt="" src="">
-					<p>2020年4月から父親として働いています。</p>
+					<img alt="赤ちゃん" src="baby.png" />
+					<p>2020年4月から父親になりました。保育士の経験を活かし、オムツ交換やお風呂、寝かしつけ等を頑張っています。</p>
 				</div>
-	    	</div>
-	    </div> 
-	    
-	    
-	    
-	    
-	    
-	    <!--　画面上部の帯 -->
-		<div class="skills_top_belt">SKILLS</div>
-		<!--　スライド表示枠 -->
-		<div id="stage">
-    		<!--　スライド切換えボタン用ラジオボタン -->
-    		<input type="radio" id="r1" name="gal">
-    		<input type="radio" id="r2" name="gal">
-    		<input type="radio" id="r3" name="gal">
-    		<input type="radio" id="r4" name="gal">
-    		<input type="radio" id="r5" name="gal">
-    		<!--　送りボタン用ラジオボタン -->
-    		<input type="radio" id="back1" name="gal"><input type="radio" id="next1" name="gal">
-    		<input type="radio" id="back2" name="gal"><input type="radio" id="next2" name="gal">
-    		<input type="radio" id="back3" name="gal"><input type="radio" id="next3" name="gal">
-    		<input type="radio" id="back4" name="gal"><input type="radio" id="next4" name="gal">
-    		<input type="radio" id="back5" name="gal"><input type="radio" id="next5" name="gal">
-    		<!-- 現スライド標示ボタンのラジオボタンとの関連付け -->
-    		<label for="r1" id="lb1" class="circ"><img src="Java.gif"></label>
-    		<label for="r2" id="lb2" class="circ"><img src="database.gif"></label>
-    		<label for="r3" id="lb3" class="circ"><img src="html.gif"></label>
-    		<label for="r4" id="lb4" class="circ"><img src="css.gif"></label>
-    		<label for="r5" id="lb5" class="circ"><img src="Python.gif"></label>
-  
-    		<!--　スライド群 -->
-    		<div id="photos">
-			<!--　スライド1 -->
-			<div id="photo1" class="pic">
-
-            	<!--　スライド写真と現スライド標示ボタン -->
-      	    	<img th:src="@{/images/child.JPEG}"><img th:src="@{/images/Java.gif}">
-
-            	<!--　送りボタンの表示とラジオボタンとの関連付け -->
-            	<label for="back1"><span class="pb">＜</span></label>
-            	<label for="next1"><span class="nb">＞</span></label>
-
-			</div>      
-			<div id="photo2" class="pic">
-      	    	<img src="banana.png"><img src="database.gif">
-            	<label for="back2"><span class="pb">＜</span></label>
-            	<label for="next2"><span class="nb">＞</span></label>
 			</div>
-			<div id="photo3" class="pic">
-      	    	<img src="banana.png"><img src="html.gif">
-            	<label for="back3"><span class="pb">＜</span></label>
-            	<label for="next3"><span class="nb">＞</span></label>
-			</div>
-			<div id="photo4" class="pic">
-      	    	<img src="banana.png"><img src="css.gif">
-            	<label for="back4"><span class="pb">＜</span></label>
-            	<label for="next4"><span class="nb">＞</span></label>
-			</div>
-			<div id="photo5" class="pic">
-      	    	<img src="banana.png"><img src="Python.gif">
-            	<label for="back5"><span class="pb">＜</span></label>
-            	<label for="next5"><span class="nb">＞</span></label>
-			</div>
-    	</div>
-    	<!-- stageの高さの確保 -->
-    	<div style="padding:33.5%;"></div>
 		</div>
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    <div class="contact">
-	    </div>
+
+
+
+
+
+		<!--　画面上部の帯 -->
+		<div id="skills_top_belt">
+			<h3>SKILLS</h3>
+		</div>
+		<div class="stage">
+			<!--　スライド表示枠 -->
+			<div id="stage">
+				<!--　スライド切換えボタン用ラジオボタン -->
+				<input type="radio" id="r1" name="gal"> <input type="radio"
+					id="r2" name="gal"> <input type="radio" id="r3" name="gal">
+				<input type="radio" id="r4" name="gal"> <input type="radio"
+					id="r5" name="gal">
+
+
+				<!--　送りボタン用ラジオボタン -->
+				<input type="radio" id="back1" name="gal"><input
+					type="radio" id="next1" name="gal"> <input type="radio"
+					id="back2" name="gal"><input type="radio" id="next2"
+					name="gal"> <input type="radio" id="back3" name="gal"><input
+					type="radio" id="next3" name="gal"> <input type="radio"
+					id="back4" name="gal"><input type="radio" id="next4"
+					name="gal"> <input type="radio" id="back5" name="gal"><input
+					type="radio" id="next5" name="gal">
+
+
+				<!-- 現スライド標示ボタンのラジオボタンとの関連付け -->
+				<label for="r1" id="lb1" class="circ"><img
+					src="java.gif"></label> <label for="r2" id="lb2" class="circ"><img
+					src="database.gif"></label> <label for="r3" id="lb3"
+					class="circ"><img src="html.gif"></label> <label
+					for="r4" id="lb4" class="circ"><img src="css.gif"></label>
+				<label for="r5" id="lb5" class="circ"><img
+					src="python.gif"></label>
+
+				<!--　スライド群 -->
+				<div id="photos">
+					<!--　スライド1 -->
+					<div id="photo1" class="pic">
+
+						<!--　スライド写真と現スライド標示ボタン -->
+						<img src="skill_java.png">
+						<div class="explanatoryText">
+							<p>Javaのデータベースアクセス、ログイン機能の</p>
+							<p>実装など基本的コーディングやJSP/サーブレット</p>
+							<p>を用いたWebアプリケーション開発も可能です。</p>
+							<p>フレームワークはSpringBootが出来ます。</p>
+						</div>
+
+						<!--　送りボタンの表示とラジオボタンとの関連付け -->
+						<label for="back1"><span class="pb">｟</span></label> <label
+							for="next1"><span class="nb">｠</span></label>
+
+					</div>
+					<div id="photo2" class="pic">
+						<img src="skill_database.png">
+						<div class="explanatoryText">
+							<p>データベース製品はSQlite、MySQLの</p>
+							<p>仕様経験があり、Java　+　MySQL、</p>
+							<p>Java + SQlite環境でのWebアプリ</p>
+							<p>ケーション開発が可能です。</p>
+						</div>
+
+						<label for="back2"><span class="pb">｟</span></label> <label
+							for="next2"><span class="nb">｠</span></label>
+					</div>
+					<div id="photo3" class="pic">
+						<img src="skill_html.png">
+						<div class="explanatoryText">
+							<p>htmlの基本的なコーディングは可能です。</p>
+							<p>タグの利用、画像やリンクの挿入、リスト、表</p>
+							<p>フォームの作成、cssによるページの装飾を</p>
+							<p>行うことが出います。</p>
+						</div>
+
+						<label for="back3"><span class="pb">｟</span></label> <label
+							for="next3"><span class="nb">｠</span></label>
+					</div>
+					<div id="photo4" class="pic">
+						<img src="skill_css.png">
+						<div class="explanatoryText">
+							<p>cssの基本的なコーディングは可能です。</p>
+							<p>フォント操作や背景、余白調整などの</p>
+							<p>レイアウト変更、調整を行います。</p>
+							<p>htmlとcssに加えてJavaScriptも勉強中です</p>
+						</div>
+
+						<label for="back4"><span class="pb">｟</span></label> <label
+							for="next4"><span class="nb">｠</span></label>
+					</div>
+					<div id="photo5" class="pic">
+						<img src="skill_python.png">
+						<div class="explanatoryText">
+							<p>現在Python、Git、Githubの勉強中</p>
+							<p></p>
+							<p></p>
+							<p></p>
+						</div>
+
+						<label for="back5"><span class="pb">｟</span></label> <label
+							for="next5"><span class="nb">｠</span></label>
+					</div>
+				</div>
+				<!-- stageの高さの確保 -->
+				<div style="padding: 33.5%;"></div>
+			</div>
+
+		</div>
+
+		<div class="navigation_under">
+			<ul>
+				<li><a href="#about_top_belt">ABOUT</a></li>
+				<li><a href="#works_top_belt">WORKS</a></li>
+				<li><a href="#skills_top_belt">SKILLS</a></li>
+			</ul>
+		</div>
+
+
 	</div>
+
+
+	<footer class="footer">
+		<h2>エルバーククラウド</h2>
+		<div class="company">
+			<div class="icon">
+				<div>
+					<img alt="ビル" src="bill.png" class="example1">
+				</div>
+				<span class="br"></span>
+				<div>
+					<img alt="電話" src="phone.png" class="example2">
+				</div>
+				<div>
+					<img alt="メール" src="mail.png" class="example3">
+				</div>
+			</div>
+			<div class="companyProf">
+				<p>Address</p>
+				<span class="br"></span>
+				<p>Phone</p>
+				<p>Email</p>
+			</div>
+			<div class="companyProf">
+				<p>: 〒153-0061 中目黒本社</p>
+				<p>東京都目黒区中目黒 4丁目 8 － 5 藤井ビル 6F</p>
+				<p>: 03-6418-9882</p>
+				<p>: sales@lberc-g.jp</p>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
