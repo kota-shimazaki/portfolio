@@ -12,6 +12,11 @@ body {
 	background-repeat: repeat;
 }
 
+.br::before {
+	content: "\A" ;
+	white-space: pre ;
+}
+
 /*　タイトル*/
 .logo {
   color: #fff;
@@ -46,48 +51,63 @@ body {
 }
 
 /*　画面上部の帯 */
-.about_top_belt {
-	height: 50px;
+#about_top_belt {
+	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
-	border: solid;
+	background-color: #82aaaa;
+}
+
+#about {
+	display: flex;
+	padding: 100px 200px;
+	justify-content: center;
+	align-items: center;
+}
+
+.about-main {
+	width: 50%;
+}
+
+.about-main p {
+	margin: 10px 0;
 }
 
 /*　　画像の表示エリア*/
-#about {
+.about-img {
 	position : relative;
 	overflow : hidden;
 			/*　　画像のサイズに合わせて変更*/
-	width : 500px;
-	height : 300px;
+	width : 50%;
+	height : 400px;
 	margin : auto;
 	background : #fff;
 }
 
 /*　　画像の設定*/
-#about img{
+.about-img img{
 	display : block;
 	position : absolute;
 			/*　　画像のサイズを表示エリアに合わせる*/
-	width : inherit;
+	width : 100%;
 	height : inherit;
-	left : 100%;
-	animation : slideAnime 10s ease infinite;
+	
+	animation : slideAnime 15s ease infinite;
 }
 
 /*　　スライドのアニメーションを段差で開始する*/
-#about img:nth-of-type(1) { animation-delay: 0s }
-#about img:nth-of-type(2) { animation-delay: 5s }
+.about-img img:nth-of-type(1) { animation-delay: 0s }
+.about-img img:nth-of-type(2) { animation-delay: 5s }
+.about-img img:nth-of-type(3) { animation-delay: 10s }
 
 /*　　スライドのアニメーション*/
 @keyframes slideAnime{
-	0% { left: 100% }
-	1% { left: 0 }
-	19% { left: 0 }
-	20% { left: -100% }
-	100% { left: -100% }
+	0% { opacity: 0 }
+	8% { opacity: 1}
+	25% { opacity: 1 }
+	33% { opacity: 0 }
+	100% { opacity: 0 }
 }
 
 
@@ -96,25 +116,25 @@ body {
 
 
 /*　画面上部の帯 */
-.works_top_belt {
-	height: 50px;
+#works_top_belt {
+	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
-	
-	border: solid;
+	background-color: #82aaaa;
 }
 
 .container {
-	 display: flex;
-	 justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 .item {
 	text-align: center;
-	margin-top: 35px;
 	width: 33.3333%;
+    padding: 0 5%;
 }
 
 .container　h3 {
@@ -129,6 +149,12 @@ body {
 	line-height: 1.5;
 }
 
+.item img {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
 
 
 
@@ -137,11 +163,18 @@ body {
 
 
 /*　画面上部の帯 */
-.skills_top_belt {
-	height: 50px;
+#skills_top_belt {
+	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #82aaaa;
+}
+
+.stage {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background: white;
 }
 
 /*　スライダー全体のコンテナー*/
@@ -149,7 +182,7 @@ body {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    background:white;
+    background: white;
 	overflow: hidden;
 }
 /*　全ラジオボタンを非表示に*/
@@ -159,18 +192,18 @@ body {
 /*　表示切換えボタンと表示位置 */
 .circ img {
     position: absolute;
-    bottom:2.5%;
+    bottom: 2.5%;
     cursor: pointer;
 }
-#lb1 img { left: 40%;width:3%; }
-#lb2 img { left: 43%;width:3%; }
-#lb3 img { left: 46%;width:3%; }
-#lb4 img { left: 49%;width:3%; }
-#lb5 img { left: 52%;width:3%; }
+#lb1 img { left: 43%;width:3%; }
+#lb2 img { left: 46%;width:3%; }
+#lb3 img { left: 49%;width:3%; }
+#lb4 img { left: 52%;width:3%; }
+#lb5 img { left: 55%;width:3%; }
 /*　左右送りボタン */
-.pb, .nb { color:black;font-weight:bold; font-size:26px;display:block;position:absolute;top:45%;/*z-index:200;pointer-events:auto;*/}
+.pb, .nb { color:#4CB2D4;font-weight:bold; font-size:26px;display:block;position:absolute;top:45%;/*z-index:200;pointer-events:auto;*/}
 .pb { left:0%; }
-.nb { left:96%; }
+.nb { left:97%; }
 .pb:hover, .nb:hover { color:orange; cursor:pointer; }
 /* stageが初期サイズ以下のなったときのサイズ */
 @media screen and (max-width: 660px) { .pb, .nb { font-size:18px; } }
@@ -190,6 +223,17 @@ body {
     width:100%;
     height:100%;
 }
+
+.pic p {
+	margin: 15px;
+}
+
+.explanatoryText {
+	position: absolute;
+	top: 200px;
+	left: 450px;
+}
+
 .pic img:nth-child(1) { width:90.9%; margin-left:4.55%; }
 .pic img:nth-child(2) { width:3%; bottom:-8.5%; /*2.5%;*/ }
 
@@ -199,12 +243,7 @@ body {
 #photo3 { left: 2000px; }
 #photo4 { left: 3000px; }
 #photo5 { left: 4000px; }
-/*　写真の下に現スライド標示ボタンを配置 */
-#photo1 img:nth-child(2) { position:absolute;left:40%;width:3%; }
-#photo2 img:nth-child(2) { position:absolute;left:43%;width:3%; }
-#photo3 img:nth-child(2) { position:absolute;left:46%;width:3%; }
-#photo4 img:nth-child(2) { position:absolute;left:49%;width:3%; }
-#photo5 img:nth-child(2) { position:absolute;left:52%;width:3%; }
+
 /*　チェックされたドットに相当するスライドが画面中央になるようにphotosを移動*/
 #r1:checked ~ #photos { animation:flowSlides1 40s infinite; animation-delay: 0s; }
 #r2:checked ~ #photos { animation:flowSlides2 40s infinite; animation-delay:-8s; }
@@ -355,4 +394,58 @@ body {
   82% { left:-4000px; opacity:1; }
   98% { left:-4000px; opacity:1; }
   100% { left:-4000px; opacity:0; }
+}
+
+.navigation_under {
+  background-color: #82aaaa;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation_under ul {
+  list-style: none;
+  font-size: 1.4rem;
+}
+.navigation_under ul li {
+  display: inline-block;
+  padding: 0 8px;
+}
+.navigation_under ul li a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer {
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 50px 100px 50px 100px;
+	color: white;
+}
+
+.footer h2{
+	padding: 10px;
+	width: 460px;
+	border-bottom: double;
+}
+
+.company {
+	display: flex;
+}
+
+img.example1 {
+	margin:9px 7px 0 0;
+}
+
+img.example2 {
+	margin:15px 7px 0 0;
+}
+
+img.example3 {
+	margin:0 7px 0 0;
+}
+
+.companyProf p {
+	margin:15px 0;
 }
