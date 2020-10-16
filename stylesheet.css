@@ -202,9 +202,15 @@ body {
 #lb4 img { left: 52%;width:3%; }
 #lb5 img { left: 55%;width:3%; }
 /*　左右送りボタン */
-.pb, .nb { color:#4CB2D4;font-weight:bold; font-size:26px;display:block;position:absolute;top:45%;/*z-index:200;pointer-events:auto;*/}
+.pb, .nb { 
+	color:#4CB2D4;
+	font-weight:bold;
+	font-size:20px;
+	display:block;
+	position:absolute;
+	top:45%;/*z-index:200;pointer-events:auto;*/}
 .pb { left:0%; }
-.nb { left:95%; }
+.nb { left:97%; }
 .pb:hover, .nb:hover { color:orange; cursor:pointer; }
 /* stageが初期サイズ以下のなったときのサイズ */
 @media screen and (max-width: 660px) { .pb, .nb { font-size:18px; } }
