@@ -205,7 +205,7 @@ body {
 .pb, .nb { 
 	color:#4CB2D4;
 	font-weight:bold;
-	font-size:20px;
+	font-size:26px;
 	display:block;
 	position:absolute;
 	top:45%;/*z-index:200;pointer-events:auto;*/}
@@ -454,5 +454,5 @@ img.example3 {
 }
 
 .companyProf p {
-	margin:15px 0;
+	margin:10px 0;
 }
